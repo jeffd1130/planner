@@ -79,6 +79,7 @@ const TASKS = {
     { id: 'sp11', group: 'Ops', text: 'Finalize Claude Products Workflow document' },
   ],
   projects: [
+    { id: 'p0', name: 'Social Media Automation', type: 'Main Project', status: 'active', next: 'Cobrinha · TitoAI · BePresent · Pares' },
     { id: 'p1', name: 'Alliance Cobrinha LA', type: 'Social Media Automation', status: 'active', next: 'Weekly production' },
     { id: 'p4', name: 'Tito AI (@TitoAIPH)', type: 'Content Channel', status: 'active', next: 'Every Thursday' },
     { id: 'p5', name: 'Golden Gate / Pares', type: 'Restaurant Ops', status: 'active', next: 'Thu Clark meeting' },
