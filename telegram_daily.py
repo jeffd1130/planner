@@ -15,6 +15,11 @@ day_keys  = ["mon","tue","wed","thu","fri","sat","sun"]
 today     = day_keys[day_idx]
 date_str  = now.strftime("%B %d, %Y")
 
+# Skip weekends
+if day_idx >= 5:
+    print(f"Weekend ({day_names[day_idx]}) — skipping.")
+    exit(0)
+
 # ── Task data ──────────────────────────────────────────────────────────
 DAILY = [
     "Review Notion dashboards",
@@ -117,6 +122,8 @@ lines = []
 
 lines.append(f"<b>Good morning, Jeff!</b>")
 lines.append(f"<i>{day_names[day_idx]}, {date_str}  ·  7:00 AM PHT</i>")
+lines.append("")
+lines.append("https://jeffd1130.github.io/planner/")
 lines.append("")
 
 # Meetings

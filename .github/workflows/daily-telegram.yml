@@ -2,8 +2,8 @@ name: Daily Planner Briefing
 
 on:
   schedule:
-    # 23:00 UTC = 7:00 AM PHT (UTC+8)
-    - cron: '0 23 * * *'
+    # 23:00 UTC Sun–Thu = 7:00 AM PHT Mon–Fri (skips Sat & Sun PHT)
+    - cron: '0 23 * * 0-4'
   workflow_dispatch:  # allow manual trigger for testing
 
 jobs:
