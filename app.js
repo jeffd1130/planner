@@ -65,7 +65,7 @@ const TASKS = {
   },
   sprint: [
     { id: 'pr1', group: 'PRIORITY', text: 'SGS Website — finalize and go live ASAP' },
-    { id: 'pr2', group: 'PRIORITY', text: 'Be Present Wear — set up Instagram account + content plan' },
+    { id: 'pr2', group: 'PRIORITY', text: 'BePresent Wear — set up Instagram account + content plan' },
     { id: 'sp1', group: 'SGS', text: 'Set up meeting with Ben Jr. re: creatives' },
     { id: 'sp2', group: 'SGS', text: 'Finalize website go-live checklist' },
     { id: 'sp3', group: 'SGS', text: 'Get address from Mafe (US + Philippines)' },
@@ -85,7 +85,7 @@ const TASKS = {
     { id: 'p6', name: 'Clark Daily Postings', type: 'Social Media (Vinz)', status: 'active', next: 'Daily check' },
     { id: 'p7', name: 'Pares Social Media', type: 'Social Media Plan', status: 'hold', next: 'Resumes Jun 8' },
     { id: 'p8', name: 'Pares Accounting & Finance', type: 'Claude Automation', status: 'due', next: 'Due Jun 15' },
-    { id: 'p13', name: 'Be Present Wear', type: 'Instagram Setup', status: 'due', next: 'Setup + content plan' },
+    { id: 'p13', name: 'BePresent Wear', type: 'Instagram Setup', status: 'due', next: 'Setup + content plan' },
     { id: 'p9', name: 'SGS Website', type: 'Website Launch', status: 'due', next: 'PRIORITY — go live ASAP' },
     { id: 'p10', name: 'SGS Social Media', type: 'Social Media Plan', status: 'planned', next: 'After website launch' },
     { id: 'p11', name: 'Claude Products Workflow', type: 'Internal Ops', status: 'progress', next: 'Finalize doc' },
