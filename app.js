@@ -12,10 +12,6 @@ const WORKSPACE = "jeff"; // same on all devices = synced data
 
 // ─── TASK DATA ────────────────────────────────────────────────────────────────
 const TASKS = {
-  daily: [
-    { id: 'd1', text: 'Review Notion dashboards' },
-    { id: 'd2', text: 'Check messages / DMs across platforms' },
-  ],
   vinz: [
     { id: 'v1', text: 'Clark daily posting — next-day post prepped (1-day advance)' },
     { id: 'v2', text: 'LA Reel Edits — edit progress (slides from Cobrinha Design TG)' },
@@ -30,6 +26,7 @@ const TASKS = {
       { id: 'mon4', text: 'Tito AI: Produce Wed demo reel (D-2 · drops Wed 7:00 PM)' },
       { id: 'mon5', text: 'Weekly priorities review — set top 3 focus items' },
       { id: 'mon6', text: 'Check pending approvals (Dani / Prof Cobrinha)' },
+      { id: 'mon7', text: 'Check Telegram groups' },
     ],
     tue: [
       { id: 'tue1', text: 'Cobrinha D-0: verify + schedule Tue LA post (7:30 PM PST)' },
@@ -216,14 +213,6 @@ function renderTask(task, resetType) {
   </div>`;
 }
 
-function renderDaily() {
-  const ids = TASKS.daily.map(t => t.id);
-  return `
-    <div class="section-header">Today — ${new Date().toLocaleDateString('en-PH', { weekday:'long', month:'long', day:'numeric' })}</div>
-    ${renderProgressBar(ids, 'daily')}
-    <div class="task-list">${TASKS.daily.map(t => renderTask(t, 'daily')).join('')}</div>
-  `;
-}
 
 function renderWeekly() {
   const todayIdx = new Date().getDay();
