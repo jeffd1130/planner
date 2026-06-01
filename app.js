@@ -27,20 +27,17 @@ const TASKS = {
     mon: [
       { id: 'mon1', type: 'meeting', text: '8:00 AM — v4 Meeting' },
       { id: 'mon2', text: 'Cobrinha: Produce Tue LA post — Adults Reel (D-2 · drops Wed 10:30 AM)' },
-      { id: 'mon3', text: 'Angelcare Social: Produce Tue slot — Solano County (D-2 · drops Wed 1 AM)' },
       { id: 'mon4', text: 'Tito AI: Produce Wed demo reel (D-2 · drops Wed 7:00 PM)' },
       { id: 'mon5', text: 'Weekly priorities review — set top 3 focus items' },
       { id: 'mon6', text: 'Check pending approvals (Dani / Prof Cobrinha)' },
     ],
     tue: [
       { id: 'tue1', text: 'Cobrinha D-0: verify + schedule Tue LA post (7:30 PM PST)' },
-      { id: 'tue2', text: 'Angelcare Social D-0: verify + schedule Tue slot (9:00 AM PST)' },
       { id: 'tue3', text: 'Follow up on pending Vinz deliverables' },
     ],
     wed: [
       { id: 'wed1', text: 'Cobrinha: Produce Thu LA post — Kids Carousel (D-2 · drops Fri 9 AM)' },
       { id: 'wed2', text: 'Tito AI: Confirm Wed demo went live at 7:00 PM PHT' },
-      { id: 'wed3', text: 'Mid-week Angelcare KPI check — flag billing anomalies' },
     ],
     thu: [
       { id: 'thu1', type: 'meeting', text: '10:30 AM — Clark Meeting (Golden Gate / Pares)' },
@@ -48,14 +45,12 @@ const TASKS = {
       { id: 'thu3', text: 'Tito AI: Content planning — script next week\'s 3 slots' },
       { id: 'thu4', text: 'Tito AI: Channel check — comments, DMs, follower growth, analytics' },
       { id: 'thu5', text: 'Cobrinha: Produce Fri LA post — Adults Lifestyle (D-2 · drops Sat 11 AM)' },
-      { id: 'thu6', text: 'Angelcare Social: Produce Fri slot — Santa Clara (D-2 · drops Sat 1 AM)' },
       { id: 'thu7', text: 'Cobrinha D-0: verify + schedule Thu LA post (6:00 PM PST)' },
       { id: 'thu8', text: 'Pares: follow up Clark meeting action items + Zoho review' },
     ],
     fri: [
       { id: 'fri1', text: 'Cobrinha: Produce Sat LA post — Kids Summer Camp (D-2 · drops Sun 9:30 AM)' },
       { id: 'fri2', text: 'Cobrinha D-0: verify + schedule Fri LA post (8:00 PM PST)' },
-      { id: 'fri3', text: 'Angelcare Social D-0: verify + schedule Fri slot (9:00 AM PST)' },
       { id: 'fri4', text: 'Tito AI: Confirm Fri inspiration went live at 7:00 PM PHT' },
       { id: 'fri5', text: 'EOW wrap-up — note completed items and carry-overs' },
       { id: 'fri6', text: 'Assign Vinz tasks for next week' },
@@ -86,8 +81,6 @@ const TASKS = {
   ],
   projects: [
     { id: 'p1', name: 'Alliance Cobrinha LA', type: 'Social Media Automation', status: 'active', next: 'Weekly production' },
-    { id: 'p2', name: 'Angelcare Social', type: 'Hiring Post Automation', status: 'active', next: 'Weekly production' },
-    { id: 'p3', name: 'Angelcare KPI', type: 'Dashboard & Analytics', status: 'active', next: 'Weekly monitoring' },
     { id: 'p4', name: 'Tito AI (@TitoAIPH)', type: 'Content Channel', status: 'active', next: 'Every Thursday' },
     { id: 'p5', name: 'Golden Gate / Pares', type: 'Restaurant Ops', status: 'active', next: 'Thu Clark meeting' },
     { id: 'p6', name: 'Clark Daily Postings', type: 'Social Media (Vinz)', status: 'active', next: 'Daily check' },

@@ -34,7 +34,6 @@ WEEKLY = {
         "meetings": ["8:00 AM — v4 Meeting"],
         "tasks": [
             "Cobrinha: Produce Tue LA post — Adults Reel (D-2, drops Wed 10:30 AM PHT)",
-            "Angelcare Social: Produce Tue slot — Solano County (D-2, drops Wed 1 AM PHT)",
             "Tito AI: Produce Wed demo reel (D-2, drops Wed 7:00 PM PHT)",
             "Weekly priorities review — set top 3 focus items",
             "Check pending approvals (Dani / Prof Cobrinha)",
@@ -44,7 +43,6 @@ WEEKLY = {
         "meetings": [],
         "tasks": [
             "Cobrinha D-0: verify + schedule Tue LA post (7:30 PM PST)",
-            "Angelcare Social D-0: verify + schedule Tue slot (9:00 AM PST)",
             "Follow up on pending Vinz deliverables",
         ],
     },
@@ -53,7 +51,6 @@ WEEKLY = {
         "tasks": [
             "Cobrinha: Produce Thu LA post — Kids Carousel (D-2, drops Fri 9 AM PHT)",
             "Tito AI: Confirm Wed demo went live at 7:00 PM PHT",
-            "Mid-week Angelcare KPI check — flag billing anomalies",
         ],
     },
     "thu": {
@@ -63,7 +60,6 @@ WEEKLY = {
             "Tito AI: Content planning — script next week's 3 slots",
             "Tito AI: Channel check — comments, DMs, follower growth, analytics",
             "Cobrinha: Produce Fri LA post — Adults Lifestyle (D-2, drops Sat 11 AM PHT)",
-            "Angelcare Social: Produce Fri slot — Santa Clara (D-2, drops Sat 1 AM PHT)",
             "Cobrinha D-0: verify + schedule Thu LA post (6:00 PM PST / 9:00 AM Fri PHT)",
             "Pares: follow up Clark meeting action items + Zoho review",
         ],
@@ -73,7 +69,6 @@ WEEKLY = {
         "tasks": [
             "Cobrinha: Produce Sat LA post — Kids Summer Camp (D-2, drops Sun 9:30 AM PHT)",
             "Cobrinha D-0: verify + schedule Fri LA post (8:00 PM PST)",
-            "Angelcare Social D-0: verify + schedule Fri slot (9:00 AM PST)",
             "Tito AI: Confirm Fri inspiration went live at 7:00 PM PHT",
             "EOW wrap-up — note completed items and carry-overs",
             "Assign Vinz tasks for next week",
