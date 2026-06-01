@@ -1,6 +1,6 @@
 # Jeff's Planner — Setup Guide
 
-A PWA task planner that works on iPhone and Mac, with real-time sync via Firebase.
+A PWA task planner that works on Samsung (Android) and Mac, with real-time sync via Firebase.
 
 ---
 
@@ -34,10 +34,13 @@ Your URL: `https://jeffd1130.github.io/planner/`
 
 ---
 
-## Step 3 — Install on iPhone
+## Step 3 — Install on Samsung S23 Ultra
 
-1. Open Safari → `https://jeffd1130.github.io/planner/`
-2. Tap the **Share** button → **Add to Home Screen** → Add
+1. Open **Chrome** → `https://jeffd1130.github.io/planner/`
+2. Chrome will show an **"Add to Home Screen"** banner at the bottom — tap it
+3. Or: tap the **3-dot menu (⋮)** → **Add to Home Screen** → Add
+
+> Also works in Samsung Internet: tap the menu → **Add page to** → **Home screen**
 
 ---
 
