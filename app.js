@@ -13,7 +13,7 @@ const WORKSPACE = "jeff"; // same on all devices = synced data
 // ─── TASK DATA ────────────────────────────────────────────────────────────────
 const TASKS = {
   vinz: [
-    { id: 'v0', text: 'Daily checkup — call or message Vinz' },
+    { id: 'v0', text: 'Daily messaging with Vinz' },
     { id: 'v1', text: 'Clark daily posting — next-day post prepped (1-day advance)' },
     { id: 'v2', text: 'LA Reel Edits — edit progress (slides from Cobrinha Design TG)' },
     { id: 'v3', text: 'Manila Slides — check if Coach Mark sent assets' },
@@ -26,9 +26,12 @@ const TASKS = {
       { id: 'mon6', text: 'Check pending approvals (Dani / Prof Cobrinha)' },
       { id: 'mon7', text: 'Check Telegram groups' },
       { id: 'mon8', text: 'Tito AI: Confirm Mon AI tip went live at 8:00 PM PHT' },
+      { id: 'mon9', type: 'meeting', text: 'Call with Vinz — weekly catch up + one on one' },
+      { id: 'mon10', text: 'Weekly prep — review upcoming week, flag content gaps' },
     ],
     tue: [
       { id: 'tue0', type: 'meeting', text: '8:00 AM — v4 Meeting' },
+      { id: 'tue4', type: 'meeting', text: 'One on One with Dino — TBD / to be requested' },
       { id: 'tue1', text: 'Cobrinha D-0: verify + schedule Tue LA post (7:30 PM PST)' },
       { id: 'tue3', text: 'Follow up on pending Vinz deliverables' },
     ],
@@ -51,6 +54,8 @@ const TASKS = {
       { id: 'fri1', text: 'Cobrinha: Produce Sat LA post — Kids Summer Camp (D-2 · drops Sun 9:30 AM)' },
       { id: 'fri2', text: 'Cobrinha D-0: verify + schedule Fri LA post (8:00 PM PST)' },
       { id: 'fri4', text: 'Tito AI: Confirm Fri inspiration went live at 7:00 PM PHT' },
+      { id: 'fri8', text: 'Friday checkpoint — review week progress' },
+      { id: 'fri9', text: 'Send weekly update to Dino' },
       { id: 'fri5', text: 'EOW wrap-up — note completed items and carry-overs' },
       { id: 'fri6', text: 'Assign Vinz tasks for next week' },
       { id: 'fri7', text: 'Update Capacity Calendar — confirm next month pipeline' },
@@ -60,7 +65,6 @@ const TASKS = {
     ],
     sun: [
       { id: 'sun1', text: 'Cobrinha: Confirm Sat LA post went live (6:30 PM PST)' },
-      { id: 'sun3', text: 'Weekly prep — review upcoming week, flag content gaps' },
     ],
   },
   sprint: [
