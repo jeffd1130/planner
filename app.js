@@ -302,7 +302,7 @@ function renderProjects() {
   `;
 }
 
-const VIEWS = { daily: renderDaily, weekly: renderWeekly, sprint: renderSprint, vinz: renderVinz, projects: renderProjects };
+const VIEWS = { weekly: renderWeekly, sprint: renderSprint, vinz: renderVinz, projects: renderProjects };
 
 function render() {
   const main = document.getElementById('main');
