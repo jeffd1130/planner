@@ -16,7 +16,6 @@ const TASKS = {
     { id: 'v1', text: 'Clark daily posting — next-day post prepped (1-day advance)' },
     { id: 'v2', text: 'LA Reel Edits — edit progress (slides from Cobrinha Design TG)' },
     { id: 'v3', text: 'Manila Slides — check if Coach Mark sent assets' },
-    { id: 'v4', text: 'IBJJF World Championship — reposts done + added to story' },
     { id: 'v5', text: 'Capacity check — flag if overloaded or has open slots' },
   ],
   weekly: {
