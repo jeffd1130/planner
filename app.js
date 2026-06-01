@@ -13,6 +13,7 @@ const WORKSPACE = "jeff"; // same on all devices = synced data
 // ─── TASK DATA ────────────────────────────────────────────────────────────────
 const TASKS = {
   vinz: [
+    { id: 'v0', text: 'Daily checkup — call or message Vinz' },
     { id: 'v1', text: 'Clark daily posting — next-day post prepped (1-day advance)' },
     { id: 'v2', text: 'LA Reel Edits — edit progress (slides from Cobrinha Design TG)' },
     { id: 'v3', text: 'Manila Slides — check if Coach Mark sent assets' },
