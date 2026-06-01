@@ -1,0 +1,19 @@
+name: Daily Planner Briefing
+
+on:
+  schedule:
+    # 23:00 UTC = 7:00 AM PHT (UTC+8)
+    - cron: '0 23 * * *'
+  workflow_dispatch:  # allow manual trigger for testing
+
+jobs:
+  send-briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send daily Telegram briefing
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 telegram_daily.py
