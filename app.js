@@ -13,10 +13,8 @@ const WORKSPACE = "jeff"; // same on all devices = synced data
 // ─── TASK DATA ────────────────────────────────────────────────────────────────
 const TASKS = {
   daily: [
-    { id: 'd1', text: 'Check email (jdelasarmas@angelcarehhs.com)' },
-    { id: 'd2', text: 'Review Notion dashboards' },
-    { id: 'd3', text: 'Angelcare KPI: scan claims queue for flags' },
-    { id: 'd4', text: 'Check messages / DMs across platforms' },
+    { id: 'd1', text: 'Review Notion dashboards' },
+    { id: 'd2', text: 'Check messages / DMs across platforms' },
   ],
   vinz: [
     { id: 'v1', text: 'Clark daily posting — next-day post prepped (1-day advance)' },
@@ -114,7 +112,7 @@ const STATUS_MAP = {
 
 // ─── STATE ────────────────────────────────────────────────────────────────────
 let completions = {};
-let currentView = 'daily';
+let currentView = 'weekly';
 let currentDay = DAY_KEYS[new Date().getDay()];
 let db = null;
 let unsubscribe = null;

@@ -17,9 +17,7 @@ date_str  = now.strftime("%B %d, %Y")
 
 # ── Task data ──────────────────────────────────────────────────────────
 DAILY = [
-    "Check email (jdelasarmas@angelcarehhs.com)",
     "Review Notion dashboards",
-    "Angelcare KPI: scan claims queue",
     "Check messages / DMs",
 ]
 
