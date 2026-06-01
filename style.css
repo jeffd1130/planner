@@ -179,6 +179,14 @@ main {
   color: var(--teal);
   padding: 12px 12px 6px;
 }
+.group-label.priority {
+  color: var(--red);
+  font-size: 12px;
+}
+.task-item.priority-item {
+  border-left: 3px solid var(--red);
+  background: rgba(239,68,68,0.06);
+}
 
 /* PROGRESS BAR */
 .progress-bar-wrap {

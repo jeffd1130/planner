@@ -23,10 +23,10 @@ const TASKS = {
     mon: [
       { id: 'mon1', type: 'meeting', text: '8:00 AM — v4 Meeting' },
       { id: 'mon2', text: 'Cobrinha: Produce Tue LA post — Adults Reel (D-2 · drops Wed 10:30 AM)' },
-      { id: 'mon4', text: 'Tito AI: Produce Wed demo reel (D-2 · drops Wed 7:00 PM)' },
       { id: 'mon5', text: 'Weekly priorities review — set top 3 focus items' },
       { id: 'mon6', text: 'Check pending approvals (Dani / Prof Cobrinha)' },
       { id: 'mon7', text: 'Check Telegram groups' },
+      { id: 'mon8', text: 'Tito AI: Confirm Mon AI tip went live at 8:00 PM PHT' },
     ],
     tue: [
       { id: 'tue1', text: 'Cobrinha D-0: verify + schedule Tue LA post (7:30 PM PST)' },
@@ -38,9 +38,11 @@ const TASKS = {
     ],
     thu: [
       { id: 'thu1', type: 'meeting', text: '10:30 AM — Clark Meeting (Golden Gate / Pares)' },
-      { id: 'thu2', text: 'Tito AI: Produce Fri inspiration reel (drops Fri 7:00 PM PHT)' },
-      { id: 'thu3', text: 'Tito AI: Content planning — script next week\'s 3 slots' },
-      { id: 'thu4', text: 'Tito AI: Channel check — comments, DMs, follower growth, analytics' },
+      { id: 'thu2', text: 'Tito AI: Produce Mon AI tip reel (drops Mon 8:00 PM PHT)' },
+      { id: 'thu3', text: 'Tito AI: Produce Wed demo reel (drops Wed 7:00 PM PHT)' },
+      { id: 'thu4', text: 'Tito AI: Produce Fri inspiration reel (drops Fri 7:00 PM PHT)' },
+      { id: 'thu9', text: 'Tito AI: Content planning — script next week\'s 3 slots' },
+      { id: 'thu10', text: 'Tito AI: Channel check — comments, DMs, follower growth, analytics' },
       { id: 'thu5', text: 'Cobrinha: Produce Fri LA post — Adults Lifestyle (D-2 · drops Sat 11 AM)' },
       { id: 'thu7', text: 'Cobrinha D-0: verify + schedule Thu LA post (6:00 PM PST)' },
       { id: 'thu8', text: 'Pares: follow up Clark meeting action items + Zoho review' },
@@ -54,16 +56,16 @@ const TASKS = {
       { id: 'fri7', text: 'Update Capacity Calendar — confirm next month pipeline' },
     ],
     sat: [
-      { id: 'sat1', text: 'Tito AI: Produce Mon AI tip reel (D-2 · drops Mon 8:00 PM)' },
       { id: 'sat2', text: 'Cobrinha: Confirm Fri LA post went live (8:00 PM PST)' },
     ],
     sun: [
       { id: 'sun1', text: 'Cobrinha: Confirm Sat LA post went live (6:30 PM PST)' },
-      { id: 'sun2', text: 'Tito AI: D-1 check — confirm Mon AI tip is ready to drop' },
       { id: 'sun3', text: 'Weekly prep — review upcoming week, flag content gaps' },
     ],
   },
   sprint: [
+    { id: 'pr1', group: 'PRIORITY', text: 'SGS Website — finalize and go live ASAP' },
+    { id: 'pr2', group: 'PRIORITY', text: 'Be Present Wear — set up Instagram account + content plan' },
     { id: 'sp1', group: 'SGS', text: 'Set up meeting with Ben Jr. re: creatives' },
     { id: 'sp2', group: 'SGS', text: 'Finalize website go-live checklist' },
     { id: 'sp3', group: 'SGS', text: 'Get address from Mafe (US + Philippines)' },
@@ -83,7 +85,8 @@ const TASKS = {
     { id: 'p6', name: 'Clark Daily Postings', type: 'Social Media (Vinz)', status: 'active', next: 'Daily check' },
     { id: 'p7', name: 'Pares Social Media', type: 'Social Media Plan', status: 'hold', next: 'Resumes Jun 8' },
     { id: 'p8', name: 'Pares Accounting & Finance', type: 'Claude Automation', status: 'due', next: 'Due Jun 15' },
-    { id: 'p9', name: 'SGS Website', type: 'Website Launch', status: 'progress', next: 'See SGS checklist' },
+    { id: 'p13', name: 'Be Present Wear', type: 'Instagram Setup', status: 'due', next: 'Setup + content plan' },
+    { id: 'p9', name: 'SGS Website', type: 'Website Launch', status: 'due', next: 'PRIORITY — go live ASAP' },
     { id: 'p10', name: 'SGS Social Media', type: 'Social Media Plan', status: 'planned', next: 'After website launch' },
     { id: 'p11', name: 'Claude Products Workflow', type: 'Internal Ops', status: 'progress', next: 'Finalize doc' },
     { id: 'p12', name: 'Capacity Calendar', type: 'Internal Ops', status: 'progress', next: 'Finalize this week' },
@@ -244,8 +247,17 @@ function renderSprint() {
     ${renderProgressBar(ids, 'sprint')}
   `;
   groups.forEach(g => {
+    const isPriority = g === 'PRIORITY';
     const items = TASKS.sprint.filter(t => t.group === g);
-    html += `<div class="group-label">${g}</div><div class="task-list">${items.map(t => renderTask(t, 'sprint')).join('')}</div>`;
+    const taskHtml = items.map(t => {
+      const done = isActive(t.id, 'sprint');
+      const cls = ['task-item', done ? 'done' : '', isPriority ? 'priority-item' : ''].filter(Boolean).join(' ');
+      return `<div class="${cls}" onclick="window._toggle('${t.id}','sprint')">
+        <div class="task-check"></div>
+        <span class="task-text">${t.text}</span>
+      </div>`;
+    }).join('');
+    html += `<div class="group-label${isPriority ? ' priority' : ''}">${g}</div><div class="task-list">${taskHtml}</div>`;
   });
   return html;
 }
