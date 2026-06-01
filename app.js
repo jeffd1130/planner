@@ -110,7 +110,7 @@ const STATUS_MAP = {
 
 // ─── STATE ────────────────────────────────────────────────────────────────────
 let completions = {};
-let currentView = 'weekly';
+let currentView = 'sprint';
 let currentDay = DAY_KEYS[new Date().getDay()];
 let db = null;
 let unsubscribe = null;
