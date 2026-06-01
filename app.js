@@ -21,7 +21,6 @@ const TASKS = {
   ],
   weekly: {
     mon: [
-      { id: 'mon1', type: 'meeting', text: '8:00 AM — v4 Meeting' },
       { id: 'mon2', text: 'Cobrinha: Produce Tue LA post — Adults Reel (D-2 · drops Wed 10:30 AM)' },
       { id: 'mon5', text: 'Weekly priorities review — set top 3 focus items' },
       { id: 'mon6', text: 'Check pending approvals (Dani / Prof Cobrinha)' },
@@ -29,6 +28,7 @@ const TASKS = {
       { id: 'mon8', text: 'Tito AI: Confirm Mon AI tip went live at 8:00 PM PHT' },
     ],
     tue: [
+      { id: 'tue0', type: 'meeting', text: '8:00 AM — v4 Meeting' },
       { id: 'tue1', text: 'Cobrinha D-0: verify + schedule Tue LA post (7:30 PM PST)' },
       { id: 'tue3', text: 'Follow up on pending Vinz deliverables' },
     ],
