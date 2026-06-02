@@ -33,7 +33,6 @@ const TASKS = {
       { id: 'tue0', type: 'meeting', text: '8:00 AM — v4 Meeting' },
       { id: 'tue4', type: 'meeting', text: 'One on One with Dino — TBD / to be requested' },
       { id: 'tue1', text: 'Cobrinha D-0: verify + schedule Tue LA post (7:30 PM PST)' },
-      { id: 'tue3', text: 'Follow up on pending Vinz deliverables' },
     ],
     wed: [
       { id: 'wed1', text: 'Cobrinha: Produce Thu LA post — Kids Carousel (D-2 · drops Fri 9 AM)' },
@@ -276,13 +275,6 @@ function renderVinz() {
     <div class="section-header">Vinz — Daily Check</div>
     ${renderProgressBar(ids, 'daily')}
     <div class="task-list">${TASKS.vinz.map(t => renderTask(t, 'daily')).join('')}</div>
-    <div class="section-header" style="margin-top:8px">Pending (activate when ready)</div>
-    <div class="task-list">
-      <div class="task-item">
-        <div class="task-check" style="opacity:0.3"></div>
-        <span class="task-text" style="color:var(--muted)">Tito AI video edits — waiting for posting schedule</span>
-      </div>
-    </div>
   `;
 }
 
