@@ -12,6 +12,18 @@ const WORKSPACE = "jeff"; // same on all devices = synced data
 
 // ─── TASK DATA ────────────────────────────────────────────────────────────────
 const TASKS = {
+  startOfDay: [
+    { id: 'sod1', text: 'DTP daily update' },
+    { id: 'sod2', text: 'Review Notion dashboards' },
+    { id: 'sod3', text: 'Check Telegram groups' },
+    { id: 'sod4', text: 'Review today\'s priorities' },
+  ],
+  endOfDay: [
+    { id: 'eod1', text: 'Log completed tasks for the day' },
+    { id: 'eod2', text: 'Send DTP end of day summary' },
+    { id: 'eod3', text: 'Prep for tomorrow — check next day\'s tasks' },
+    { id: 'eod4', text: 'Wrap-up message to Vinz' },
+  ],
   vinz: [
     { id: 'v0', text: 'Daily messaging with Vinz' },
     { id: 'v1', text: 'Clark daily posting — next-day post prepped (1-day advance)' },
@@ -68,7 +80,6 @@ const TASKS = {
   },
   sprint: [
     { id: 'pr1', group: 'PRIORITY', text: 'SGS Website — customers can buy, pay and receive delivery' },
-    { id: 'pr2', group: 'PRIORITY', text: 'BePresent Wear — set up Instagram account + content plan' },
     { id: 'sp0a', group: 'SGS', text: 'Secure PayPal login + enable 2FA' },
     { id: 'sp0b', group: 'SGS', text: 'Get owner/admin access to website (Shopify)' },
     { id: 'sp0c', group: 'SGS', text: 'Get shirt images for website (high-res)' },
@@ -86,10 +97,9 @@ const TASKS = {
     { id: 'sp11', group: 'Ops', text: 'Finalize Claude Products Workflow document' },
   ],
   projects: [
-    { id: 'p0', name: 'Social Media Automation', type: 'Main Project', status: 'active', next: 'Cobrinha · TitoAI · BePresent' },
+    { id: 'p0', name: 'Social Media Automation', type: 'Main Project', status: 'active', next: 'Cobrinha · TitoAI' },
     { id: 'p1', name: 'Alliance Cobrinha LA', type: 'Social Media Automation', status: 'active', next: 'Weekly production' },
     { id: 'p4', name: 'Tito AI (@TitoAIPH)', type: 'Content Channel', status: 'active', next: 'Every Thursday' },
-    { id: 'p13', name: 'BePresent Wear', type: 'Instagram Setup', status: 'due', next: 'Setup + content plan' },
     { id: 'p9', name: 'SGS Website', type: 'Website Launch', status: 'due', next: 'PRIORITY — go live ASAP' },
     { id: 'p10', name: 'SGS Social Media', type: 'Social Media Plan', status: 'planned', next: 'After website launch' },
     { id: 'p11', name: 'Claude Products Workflow', type: 'Internal Ops', status: 'progress', next: 'Finalize doc' },
@@ -233,12 +243,18 @@ function renderWeekly() {
     return `<button class="${cls}" onclick="window._setDay('${k}')">${DAY_LABELS[i]}</button>`;
   }).join('');
 
+  const allIds = [...TASKS.startOfDay.map(t=>t.id), ...ids, ...TASKS.endOfDay.map(t=>t.id)];
   return `
     <div class="day-tabs">${tabs}</div>
-    ${renderProgressBar(ids, 'weekly')}
+    ${renderProgressBar(allIds, 'daily')}
+    <div class="group-label">Start of Day</div>
+    <div class="task-list">${TASKS.startOfDay.map(t => renderTask(t, 'daily')).join('')}</div>
+    <div class="group-label">Tasks</div>
     <div class="task-list">
       ${dayTasks.length ? dayTasks.map(t => renderTask(t, 'weekly')).join('') : '<div class="empty">No tasks for this day.</div>'}
     </div>
+    <div class="group-label">End of Day</div>
+    <div class="task-list">${TASKS.endOfDay.map(t => renderTask(t, 'daily')).join('')}</div>
     <button class="reset-btn" onclick="window._resetWeek()">Reset this week</button>
   `;
 }
