@@ -70,6 +70,10 @@ const TASKS = {
   sprint: [
     { id: 'pr1', group: 'PRIORITY', text: 'SGS Website — finalize and go live ASAP' },
     { id: 'pr2', group: 'PRIORITY', text: 'BePresent Wear — set up Instagram account + content plan' },
+    { id: 'sp0a', group: 'SGS', text: 'Secure PayPal login + enable 2FA' },
+    { id: 'sp0b', group: 'SGS', text: 'Get owner/admin access to website' },
+    { id: 'sp0c', group: 'SGS', text: 'Get shirt images for website (high-res)' },
+    { id: 'sp0d', group: 'SGS', text: 'Learn image uploading + inventory setup on website' },
     { id: 'sp1', group: 'SGS', text: 'Set up meeting with Ben Jr. re: creatives' },
     { id: 'sp2', group: 'SGS', text: 'Finalize website go-live checklist' },
     { id: 'sp3', group: 'SGS', text: 'Get address from Mafe (US + Philippines)' },
