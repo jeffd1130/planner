@@ -50,6 +50,7 @@ const TASKS = {
       { id: 'wed2', text: 'Tito AI: Confirm Wed demo went live at 7:00 PM PHT' },
     ],
     thu: [
+      { id: 'thu11', type: 'meeting', text: 'Alliance Clark Marketing Meeting' },
       { id: 'thu2', text: 'Tito AI: Produce Mon AI tip reel (drops Mon 8:00 PM PHT)' },
       { id: 'thu3', text: 'Tito AI: Produce Wed demo reel (drops Wed 7:00 PM PHT)' },
       { id: 'thu4', text: 'Tito AI: Produce Fri inspiration reel (drops Fri 7:00 PM PHT)' },
