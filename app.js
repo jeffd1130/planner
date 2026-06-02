@@ -75,7 +75,6 @@ const TASKS = {
     { id: 'sp0c', group: 'SGS', text: 'Get shirt images for website (high-res)' },
     { id: 'sp0d', group: 'SGS', text: 'Learn image uploading + inventory setup on website' },
     { id: 'sp1', group: 'SGS', text: 'Set up meeting with Ben Jr. re: creatives' },
-    { id: 'sp2', group: 'SGS', text: 'Finalize website go-live checklist' },
     { id: 'sp3', group: 'SGS', text: 'Get address from Mafe (US + Philippines)' },
     { id: 'sp4', group: 'SGS', text: 'Finalize merch pictures with descriptions' },
     { id: 'sp5', group: 'SGS', text: 'Identify SGS social media content plan' },
