@@ -1,4 +1,4 @@
-"""
+"
 Telegram bot — remote control for Jeff's Planner.
 Runs continuously on Mac (long polling). Responds to commands instantly.
 
@@ -10,7 +10,7 @@ Commands:
   /sprint   — current action items
   /projects — project pipeline
   /help     — command list
-"""
+"
 import os, sys, time, datetime, urllib.request, urllib.parse, json
 
 TOKEN   = os.environ.get("TELEGRAM_BOT_TOKEN", "8982254096:AAHkeiVliPX1CD8yemDIJPoYXepwJgHAakE")
@@ -18,15 +18,13 @@ CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "8325608814")
 
 # ── Task data ──────────────────────────────────────────────────────────
 DAILY_TASKS = [
-    "Review Notion dashboards",
+    "Review GitHub dashboard",
     "Check messages / DMs",
 ]
 
 VINZ_TASKS = [
-    "Clark daily posting — next-day post prepped (1-day advance)",
     "LA Reel Edits — check progress (slides from Cobrinha Design TG)",
     "Manila Slides — check if Coach Mark sent assets",
-    "IBJJF World Championship — reposts done + added to story",
     "Capacity check — flag if overloaded or has open slots",
 ]
 
@@ -59,14 +57,12 @@ WEEKLY = {
     },
     "thu": {
         "label": "Thursday",
-        "meetings": ["10:30 AM — Clark Meeting (Golden Gate / Pares)"],
         "tasks": [
             "Tito AI: Produce Fri inspiration reel (drops Fri 7:00 PM PHT)",
             "Tito AI: Content planning — script next week's 3 slots",
             "Tito AI: Channel check — comments, DMs, follower growth, analytics",
             "Cobrinha: Produce Fri LA post — Adults Lifestyle (D-2, drops Sat 11 AM)",
             "Cobrinha D-0: verify + schedule Thu LA post (6:00 PM PST)",
-            "Pares: follow up Clark meeting action items + Zoho review",
         ],
     },
     "fri": {
@@ -107,12 +103,7 @@ SPRINT = {
         "Get address from Mafe (US + Philippines)",
         "Finalize merch pictures with descriptions",
         "Identify SGS social media content plan",
-    ],
-    "Pares": [
-        "Finish Pares Social Media Plan — resume Jun 8 (3x/week)",
-        "Build Pares accounting & finance automation — due Jun 15",
-    ],
-    "Ops": [
+    ],    "Ops": [
         "Check Vinz tasks — assess current capacity",
         "Finalize Capacity Calendar for next month",
         "Set Tito AI posting schedule (unlocks Vinz video edits)",
@@ -122,10 +113,6 @@ SPRINT = {
 PROJECTS = [
     ("Alliance Cobrinha LA",       "Social Media",   "Active"),
     ("Tito AI (@TitoAIPH)",        "Content Channel","Active"),
-    ("Golden Gate / Pares",        "Restaurant Ops", "Active"),
-    ("Clark Daily Postings",       "Social (Vinz)",  "Active"),
-    ("Pares Social Media",         "Social Plan",    "Resumes Jun 8"),
-    ("Pares Accounting & Finance", "Automation",     "Due Jun 15"),
     ("SGS Website",                "Website Launch", "In Progress"),
     ("SGS Social Media",           "Social Plan",    "Planned"),
     ("Claude Products Workflow",   "Internal Ops",   "In Progress"),
@@ -149,7 +136,6 @@ def fmt_daily(day_key=None):
     lines = [
         f"<b>Good morning, Jeff!</b>",
         f"<i>{d['label']}, {now.strftime('%B %d, %Y')}  ·  PHT</i>",
-        "",
     ]
     if d["meetings"]:
         lines.append("<b>MEETINGS</b>")
@@ -170,7 +156,7 @@ def fmt_week():
     lines = [f"<b>This Week — {now.strftime('%B %d, %Y')}</b>", ""]
     for k in DAY_ORDER:
         d = WEEKLY[k]
-        marker = " (today)" if k == today_key() else ""
+        marker = " (today)" if k == today_key() else
         lines.append(f"<b>{d['label'].upper()}{marker}</b>")
         if d["meetings"]:
             for m in d["meetings"]: lines.append(f"  [{m}]")
@@ -220,7 +206,7 @@ def fmt_help():
 /projects — project pipeline
 /help — this list
 
-App: https://jeffd1130.github.io/planner/"""
+App: https://jeffd1130.github.io/planner/"
 
 COMMANDS = {
     "/start":    lambda: fmt_help(),
@@ -274,7 +260,7 @@ def run():
                 chat = str(msg.get("chat", {}).get("id", ""))
                 if chat != CHAT_ID:
                     continue
-                cmd = text.split()[0].lower() if text else ""
+                cmd = text.split()[0].lower() if text else
                 if cmd in COMMANDS:
                     send(COMMANDS[cmd]())
                 elif text:

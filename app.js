@@ -14,7 +14,7 @@ const WORKSPACE = "jeff"; // same on all devices = synced data
 const TASKS = {
   startOfDay: [
     { id: 'sod1', text: 'DTP daily update' },
-    { id: 'sod2', text: 'Review Notion dashboards' },
+    { id: 'sod2', text: 'Review GitHub dashboard' },
     { id: 'sod3', text: 'Check Telegram groups' },
     { id: 'sod4', text: 'Review today\'s priorities' },
   ],
@@ -26,7 +26,6 @@ const TASKS = {
   ],
   vinz: [
     { id: 'v0', text: 'Daily messaging with Vinz' },
-    { id: 'v1', text: 'Clark daily posting — next-day post prepped (1-day advance)' },
     { id: 'v2', text: 'LA Reel Edits — edit progress (slides from Cobrinha Design TG)' },
     { id: 'v3', text: 'Manila Slides — check if Coach Mark sent assets' },
     { id: 'v5', text: 'Capacity check — flag if overloaded or has open slots' },
@@ -51,7 +50,6 @@ const TASKS = {
       { id: 'wed2', text: 'Tito AI: Confirm Wed demo went live at 7:00 PM PHT' },
     ],
     thu: [
-      { id: 'thu1', type: 'meeting', text: '10:30 AM — Clark Meeting (Golden Gate / Pares)' },
       { id: 'thu2', text: 'Tito AI: Produce Mon AI tip reel (drops Mon 8:00 PM PHT)' },
       { id: 'thu3', text: 'Tito AI: Produce Wed demo reel (drops Wed 7:00 PM PHT)' },
       { id: 'thu4', text: 'Tito AI: Produce Fri inspiration reel (drops Fri 7:00 PM PHT)' },
@@ -59,7 +57,6 @@ const TASKS = {
       { id: 'thu10', text: 'Tito AI: Channel check — comments, DMs, follower growth, analytics' },
       { id: 'thu5', text: 'Cobrinha: Produce Fri LA post — Adults Lifestyle (D-2 · drops Sat 11 AM)' },
       { id: 'thu7', text: 'Cobrinha D-0: verify + schedule Thu LA post (6:00 PM PST)' },
-      { id: 'thu8', text: 'Pares: follow up Clark meeting action items + Zoho review' },
     ],
     fri: [
       { id: 'fri1', text: 'Cobrinha: Produce Sat LA post — Kids Summer Camp (D-2 · drops Sun 9:30 AM)' },

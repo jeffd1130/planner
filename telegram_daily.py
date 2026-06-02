@@ -1,7 +1,7 @@
-"""
+"
 Daily 7 AM PHT briefing — sent via Telegram bot.
 Run by GitHub Actions cron (23:00 UTC = 7:00 AM PHT).
-"""
+"
 import os, datetime, urllib.request, urllib.parse, json
 
 TOKEN   = os.environ["TELEGRAM_BOT_TOKEN"]
@@ -22,15 +22,13 @@ if day_idx >= 5:
 
 # ── Task data ──────────────────────────────────────────────────────────
 DAILY = [
-    "Review Notion dashboards",
+    "Review GitHub dashboard",
     "Check messages / DMs",
 ]
 
 VINZ = [
-    "Clark daily posting — next-day post prepped (1-day advance)",
     "LA Reel Edits — check progress (slides from Cobrinha Design TG)",
     "Manila Slides — check if Coach Mark sent assets",
-    "IBJJF World Championship — reposts done + added to story",
     "Capacity check — flag if overloaded or has open slots",
 ]
 
@@ -59,14 +57,13 @@ WEEKLY = {
         ],
     },
     "thu": {
-        "meetings": ["10:30 AM — Clark Meeting (Golden Gate / Pares)"],
+        "meetings": [],
         "tasks": [
             "Tito AI: Produce Fri inspiration reel (drops Fri 7:00 PM PHT)",
             "Tito AI: Content planning — script next week's 3 slots",
             "Tito AI: Channel check — comments, DMs, follower growth, analytics",
             "Cobrinha: Produce Fri LA post — Adults Lifestyle (D-2, drops Sat 11 AM PHT)",
             "Cobrinha D-0: verify + schedule Thu LA post (6:00 PM PST / 9:00 AM Fri PHT)",
-            "Pares: follow up Clark meeting action items + Zoho review",
         ],
     },
     "fri": {
@@ -104,12 +101,7 @@ SPRINT_GROUPS = {
         "Get address from Mafe (US + Philippines)",
         "Finalize merch pictures with descriptions",
         "Identify SGS social media content plan",
-    ],
-    "Pares": [
-        "Finish Pares Social Media Plan — resume Jun 8 (3x/week)",
-        "Build Pares accounting & finance automation — due Jun 15",
-    ],
-    "Ops": [
+    ],    "Ops": [
         "Check Vinz tasks — assess current capacity",
         "Finalize Capacity Calendar for next month",
         "Set Tito AI posting schedule (unlocks Vinz video edits)",
