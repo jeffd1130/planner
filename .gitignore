@@ -1,0 +1,4 @@
+bot.log
+.DS_Store
+*.local
+.env
